@@ -1,0 +1,11 @@
+<h1>これをやれ</h1>
+
+<h2><%= @task.id %>番目にやること</h2>
+
+<p><%= @task.content %></p>
+
+<%= link_to 'やること一覧', tasks_path %>
+
+<%= link_to 'やること編集', edit_task_path(@task) %>
+
+<%= link_to 'やること削除', @task, method: :delete, data: { confirm: '本当に消すのか？' } %>
