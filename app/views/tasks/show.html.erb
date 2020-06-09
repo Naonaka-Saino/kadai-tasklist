@@ -2,7 +2,9 @@
 
 <h2><%= @task.id %>番目にやること</h2>
 
-<p><%= @task.content %></p>
+<p>早くやれ：<%= @task.content %></p>
+
+<p>状態：<%= @task.status %></p>
 
 <%= link_to 'やること一覧', tasks_path %>
 
