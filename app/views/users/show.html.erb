@@ -1,2 +1,10 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<%= @user.name %>
+
+<img src="<%= gravatar_url(@user, { size: 50 }) %>
+">
+
+<ul>
+    <li><%= link_to "ユーザ一覧", users_path %></li>
+    <li><a></a></li>
+    <li><a></a></li>
+</ul>
