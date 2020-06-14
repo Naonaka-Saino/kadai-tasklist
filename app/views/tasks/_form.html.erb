@@ -2,7 +2,6 @@
 
 <% if task.errors.any? %>
 
-    <div id="error_explanation">
       <ul>
         
 <% task.errors.full_messages.each do |tsk| %>
@@ -14,10 +13,8 @@
 <% end %>
 
       </ul>
-    </div>
-  
+      
 <% end %>
-
   
 <%= f.label :content, 'やること' %>
 

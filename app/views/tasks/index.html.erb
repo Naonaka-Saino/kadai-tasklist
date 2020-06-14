@@ -1,23 +1,27 @@
 <% if logged_in? %>
 
 
-<h1>"<%= @user.name %>さんの"やること！</h1>
+<h1><img src="<%= gravatar_url(current_user, { size: 50 }) %>
+"><%= link_to current_user.name, user_path(current_user) %>さんのやること！</h1>
+<br>
 <ul>
   <% @tasks.each do |task| %>
   <li>
     <%= link_to task.id, task %>
-    
+    <%= task.created_at %>
     <%= task.content %>
     =&gt;状態：<%= task.status %>
     
   </li>
-  <% end %>      
-        
-</ul>
+  
+  </ul>
+<% end %>
 
-<%= link_to 'やること追加', new_task_path %>
+<%= paginate @tasks %>
 
-<%= link_to 'ユーザ登録', signup_path %>
+<br>
+
+<%= link_to 'やること追加する', new_task_path %>
 
 <% else %>
 
