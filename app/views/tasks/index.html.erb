@@ -2,7 +2,7 @@
 
 
 <h1><img src="<%= gravatar_url(current_user, { size: 50 }) %>
-"><%= link_to current_user.name, user_path(current_user) %>さんのやること！</h1>
+"><%= current_user.name %>さんのやること！</h1>
 <br>
 <ul>
   <% @tasks.each do |task| %>
