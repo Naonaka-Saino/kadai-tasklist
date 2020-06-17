@@ -4,28 +4,31 @@
 
 <%= render 'layouts/error_messages', model: f.object %>
 
-<%= f.label :name,'名前　　　　　' %>
+<%= f.label :name,'名前' %>
+
+<br>
 
 <%= f.text_field :name %>
 
 <br>
 
-<%= f.label :email,'Email 　　　　' %>
-
+<%= f.label :email,'Email' %>
+<br>
 <%= f.email_field :email %>
 
 <br>
 
-<%= f.label :password,'パスワード　　' %>
-
+<%= f.label :password,'パスワード' %>
+<br>
 <%= f.password_field :password %>
 
 <br>
 
 <%= f.label :password_confirmation, 'パスワード確認' %>
-
+<br>
 <%= f.password_field :password_confirmation %>
 
+<br>
 <br>
 
 <%= f.submit 'Submit' %>

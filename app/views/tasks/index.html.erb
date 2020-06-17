@@ -1,3 +1,5 @@
+<% if logged_in? %>
+
 <h1><img src="<%= gravatar_url(current_user, { size: 50 }) %>
 "><%= current_user.name %>さんのやること！</h1>
 <br>
@@ -19,3 +21,9 @@
 <br>
 
 <%= link_to 'やること追加する', new_task_path %>
+
+<% else %>
+
+<% render login_path %>
+
+<%  end %>
