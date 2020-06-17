@@ -8,7 +8,6 @@ class TasksController < ApplicationController
   end
 
   def show
-   @task=current_user.tasks.find(params[:id])
   end
 
   def new
@@ -31,11 +30,9 @@ class TasksController < ApplicationController
   end
 
   def edit
-      @task = Task.find(params[:id])
   end
 #editのフォームから送信される内容の処理
   def update
-      @task = Task.find(params[:id])
       if @task.update(task_params)
       flash[:success] = '編集したぞ、意思の弱いやつめ'
       redirect_to @task
